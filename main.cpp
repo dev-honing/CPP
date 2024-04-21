@@ -59,3 +59,8 @@ int main() {
 
     return 0;
 }
+
+// 4-4. 출력된 결과 확인
+// number 변수의 값: 10
+// pointer 변수의 값: 10
+// pointer 변수가 가리키는 메모리 주소: 0x61fe14
