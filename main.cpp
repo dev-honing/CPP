@@ -41,6 +41,21 @@
 //     return 0;
 // }
 
-// 4. 포인터 작성법
-int number = 10; // 정수형 변수 선언 및 초기화
-int* pointer = &number; // 포인터 변수 선언 및 정수형 변수의 주소로 초기화
+// 4. 포인터 기본 작성법
+#include <iostream>
+
+int main() {
+    // 4-1. 정수형 변수 선언 및 초기화
+    int number = 10;
+    // 4-2. 포인터 변수 선언 및 정수형 변수의 주소로 초기화
+    int* pointer = &number;
+    // * 연산자: 포인터가 가리키는 값을 역참조해서 가져온다. *pointer는 number 변수의 값을 반환한다.
+    // & 연산자: 변수의 주소를 가져온다. &number는 number 변수의 주소를 반환한다.
+    
+    // 4-3. 변수의 값과 포인터가 가리키는 값 출력
+    std::cout << "number 변수의 값: " << number << std::endl;
+    std::cout << "pointer 변수의 값: " << *pointer << std::endl;
+    std::cout << "pointer 변수가 가리키는 메모리 주소: " << pointer << std::endl;
+
+    return 0;
+}
