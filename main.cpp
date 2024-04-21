@@ -7,3 +7,11 @@
     여러 줄 주석을 작성해본다.
     JSDoc과 닮았지만, C++에서는 이렇게 작성한다.
 */
+
+// 2. 출력 함수
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, C++!" << std::endl;
+    return 0;
+}
