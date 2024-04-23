@@ -2,31 +2,23 @@
 #include <string>
 
 int main(void) {
-	// 문제 6. 계산기 구현 - 변수 a, b를 선언하고 a에는 100, b에는 10을 할당하고 다음을 출력하시오.
-	/*
-	* 
-	1) a + b
+	// 문제 7. 변수 a, b, c, d를 선언하고 값 3, 5, 3, 4를 각각 할당하고 ((a+b)*c)/d 수식의 값을 출력하시오.
 
-	2) a - b
-
-	3) a * b
-
-	4) a / b
-	*/
-
-	// 6-1. 변수 선언
+	// 7-1. 변수 선언
 	int a;
 	int b;
+	int c;
+	int d;
 
-	// 6-2. 값 할당
-	a = 100;
-	b = 10;
+	// 7-2. 값을 할당
+	a = 3;
+	b = 5;
+	c = 3;
+	d = 4;
 
-	// 6-3. 계산기 구현
-	std::cout << "a + b = " << a + b << std::endl;
-	std::cout << "a - b = " << a - b << std::endl;
-	std::cout << "a * b = " << a * b << std::endl;
-	std::cout << "a / b = " << a / b << std::endl;
+	// 7-3. ((a+b)*c)/d 수식의 값
+	std::cout << "((a+b)*c)/d = " << ((a + b) * c) / d << std::endl;
+
 
 	return 0;
 }
