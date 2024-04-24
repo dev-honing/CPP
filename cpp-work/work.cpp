@@ -1,30 +1,18 @@
 #include <iostream>
 
 int main() {
-	// 문제 15. 행운의 수 - 숫자 3개를 입력받고, 세 수의 합이 세 수의 곱보다 크거나 같으면 "행운의 수"를 출력하고, 그렇지 않으면 "소소한 수"를 출력하시오.
-
-	// 15-1. 입력받을 숫자를 변수 선언
-	int input1;
-	int input2;
-	int input3;
-
-	// 15-2. 입력받은 숫자를 저장
-	std::cout << "첫번째 숫자를 입력하세요." << std::endl;
-	std::cin >> input1;
+	// 문제 16. 역발상 - 어떤 소스코드를 출력하여 #을 10번 출력했다면, 작성된 소스코드가 무엇일지 작성하시오.(단, 사용자 입력은 없고, for문을 활용할 것)
 	
-	std::cout << "두번째 숫자를 입력하세요." << std::endl;
-	std::cin >> input2;
+	// 16-1. 문자형을 변수 선언 및 초기화
+	char hashTag = '#';
 
-	std::cout << "세번째 숫자를 입력하세요." << std::endl;
-	std::cin >> input3;
-
-	// 15-3. 조건문 적용
-	if (input1 + input2 + input3 >= input1 * input2 * input3) {
-		std::cout << "행운의 수" << std::endl;
-	}
-	else {
-		std::cout << "소소한 수" << std::endl;
+	// 16-2. 반복문 작성
+	for (int i = 0; i < 10; i++) {
+		std::cout << hashTag;
 	}
 
 	return 0;
 }
+
+// 콘솔 확인
+// ##########
