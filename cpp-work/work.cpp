@@ -1,42 +1,55 @@
 #include <iostream>
 
 int main() {
-	// 문제 12. a, b 변수 두 개를 입력받고, 사칙연산을 출력하시오.
-	
-	// 12-1. 안내 메시지 출력
-	std::cout << "사용할 변수 a, b를 입력하세요." << std::endl;
+	// 문제 13. 숫자 3개를 입력받고, 그 중에서 가장 큰 수를 출력하시오.
+	// (단, 입력된 숫자들은 모두 다르고, 같은 숫자인지는 고려하지 않아도 좋다.)
 
-	// 12-2. 변수 선언
-	int a;
-	int b;
+	// 13-1. 변수 선언
+	int first;
+	int second;
+	int third;
 
-	// 12-3. a 값 입력받기
-	std::cout << "사용할 변수 a의 값은?" << std::endl;
-	std::cin >> a;
+	// 13-2. 입력받기
+	// 1) 첫번째
+	std::cout << "1) 숫자를 골라주세요." << std::endl;
+	std::cin >> first;
 
-	// 12-4. b 값 입력받기 
-	std::cout << "사용할 변수 b의 값은?" << std::endl;
-	std::cin >> b;
+	// 2) 두번째
+	std::cout << "2) 숫자를 골라주세요." << std::endl;
+	std::cin >> second;
 
-	// 12-5. 입력받은 값 출력
-	std::cout << "변수 a의 값은 " << a << "이라고 입력하셨습니다." << std::endl;
-	std::cout << "변수 b의 값은 " << b << "이라고 입력하셨습니다." << std::endl;
+	// 3) 세번째
+	std::cout << "3) 숫자를 골라주세요." << std::endl;
+	std::cin >> third;
 
-	// 12-6. 사칙연산 출력
-	std::cout << "a + b = " << a + b << std::endl;
-	std::cout << "a - b = " << a - b << std::endl;
-	std::cout << "a * b = " << a * b << std::endl;
-	std::cout << "a / b = " << a / b << std::endl;
+	// 13-3. 가장 큰 수 고르기
+	// 13-3-1. 1번이 가장 큰 경우를 가정
+	if (first > second && first > third) { // 1번 > 2번, 1번 > 3번
+		if (second > third) { // 2번 > 3번
+			std::cout << first << ", " << second << ", " << third << " 순으로 큽니다." << std::endl;
+		}
+		else { // 2번 < 3번
+			std::cout << first << ", " <<  third << ", " << second << " 순으로 큽니다." << std::endl;
+		}
+	}
+	// 13-3-2. 2번이 가장 큰 경우를 가정
+	if (second > first && second > third) { // 2번 > 1번, 2번 > 3번
+		if (first > third) { // 1번 > 3번
+			std::cout << second << ", " << first << ", " << third << " 순으로 큽니다." << std::endl;
+		}
+		else { // 3번 > 1번
+			std::cout << second << ", " << third << ", " << first << " 순으로 큽니다." << std::endl;
+		}
+	}
+	// 13-3. 3번이 가장 큰 경우를 가정
+	if (third > first && third > second) { // 3번 > 1번, 3번 > 2번
+		if (second > first) { // 2번 > 1번
+			std::cout << third << ", " << second << ", " <<  first << " 순으로 큽니다." << std::endl;
+		}
+		else { // 1번 > 2번
+			std::cout << third << ", " << first << ", " << second << " 순으로 큽니다." << std::endl;
+		}
+	}
 
 	return 0;
 }
-
-// 콘솔 출력 내용
-/*
-변수 a의 값은 10이라고 입력하셨습니다.
-변수 b의 값은 5이라고 입력하셨습니다.
-a + b = 15
-a - b = 5
-a * b = 50
-a / b = 2
-*/
