@@ -1,26 +1,29 @@
 #include <iostream>
 
 int main() {
-	// 문제 14. 입력과 증감식 - 숫자 1개를 변수 input에 입력받아 저장하고, 입력한 숫자가 3보다 크면 input 값에서 1을 더하고 출력(input++;)
-	// 그렇지 않으면, input 값에서 1을 빼고 출력(input--;)
+	// 문제 15. 행운의 수 - 숫자 3개를 입력받고, 세 수의 합이 세 수의 곱보다 크거나 같으면 "행운의 수"를 출력하고, 그렇지 않으면 "소소한 수"를 출력하시오.
 
-	// 14-1. 변수 input 선언
-	int input;
+	// 15-1. 입력받을 숫자를 변수 선언
+	int input1;
+	int input2;
+	int input3;
 
-	// 14-2. 안내 메시지 출력
-	std::cout << "숫자를 입력하세요." << std::endl;
+	// 15-2. 입력받은 숫자를 저장
+	std::cout << "첫번째 숫자를 입력하세요." << std::endl;
+	std::cin >> input1;
+	
+	std::cout << "두번째 숫자를 입력하세요." << std::endl;
+	std::cin >> input2;
 
-	// 14-3. 숫자 입력받기
-	std::cin >> input;
+	std::cout << "세번째 숫자를 입력하세요." << std::endl;
+	std::cin >> input3;
 
-	// 14-4. 조건문 작성
-	if (input > 3) {
-		input++;
-		std::cout << "input에 저장된 값은 " << input << "입니다." << std::endl;
+	// 15-3. 조건문 적용
+	if (input1 + input2 + input3 >= input1 * input2 * input3) {
+		std::cout << "행운의 수" << std::endl;
 	}
 	else {
-		input--;
-		std::cout << "input에 저장된 값은 " << input << "입니다." << std::endl;
+		std::cout << "소소한 수" << std::endl;
 	}
 
 	return 0;
