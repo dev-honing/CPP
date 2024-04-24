@@ -1,54 +1,26 @@
 #include <iostream>
 
 int main() {
-	// 문제 13. 숫자 3개를 입력받고, 그 중에서 가장 큰 수부터 출력하시오.
-	// (단, 입력된 숫자들은 모두 다르고, 같은 숫자인지는 고려하지 않아도 좋다.)
+	// 문제 14. 입력과 증감식 - 숫자 1개를 변수 input에 입력받아 저장하고, 입력한 숫자가 3보다 크면 input 값에서 1을 더하고 출력(input++;)
+	// 그렇지 않으면, input 값에서 1을 빼고 출력(input--;)
 
-	// 13-1. 변수 선언
-	int first;
-	int second;
-	int third;
+	// 14-1. 변수 input 선언
+	int input;
 
-	// 13-2. 입력받기
-	// 1) 첫번째
-	std::cout << "1) 숫자를 골라주세요." << std::endl;
-	std::cin >> first;
+	// 14-2. 안내 메시지 출력
+	std::cout << "숫자를 입력하세요." << std::endl;
 
-	// 2) 두번째
-	std::cout << "2) 숫자를 골라주세요." << std::endl;
-	std::cin >> second;
+	// 14-3. 숫자 입력받기
+	std::cin >> input;
 
-	// 3) 세번째
-	std::cout << "3) 숫자를 골라주세요." << std::endl;
-	std::cin >> third;
-
-	// 13-3. 가장 큰 수 고르기
-	// 13-3-1. 1번이 가장 큰 경우를 가정
-	if (first > second && first > third) { // 1번 > 2번, 1번 > 3번
-		if (second > third) { // 2번 > 3번
-			std::cout << first << ", " << second << ", " << third << " 순으로 큽니다." << std::endl;
-		}
-		else { // 2번 < 3번
-			std::cout << first << ", " << third << ", " << second << " 순으로 큽니다." << std::endl;
-		}
+	// 14-4. 조건문 작성
+	if (input > 3) {
+		input++;
+		std::cout << "input에 저장된 값은 " << input << "입니다." << std::endl;
 	}
-	// 13-3-2. 2번이 가장 큰 경우를 가정
-	if (second > first && second > third) { // 2번 > 1번, 2번 > 3번
-		if (first > third) { // 1번 > 3번
-			std::cout << second << ", " << first << ", " << third << " 순으로 큽니다." << std::endl;
-		}
-		else { // 3번 > 1번
-			std::cout << second << ", " << third << ", " << first << " 순으로 큽니다." << std::endl;
-		}
-	}
-	// 13-3. 3번이 가장 큰 경우를 가정
-	if (third > first && third > second) { // 3번 > 1번, 3번 > 2번
-		if (second > first) { // 2번 > 1번
-			std::cout << third << ", " << second << ", " << first << " 순으로 큽니다." << std::endl;
-		}
-		else { // 1번 > 2번
-			std::cout << third << ", " << first << ", " << second << " 순으로 큽니다." << std::endl;
-		}
+	else {
+		input--;
+		std::cout << "input에 저장된 값은 " << input << "입니다." << std::endl;
 	}
 
 	return 0;
