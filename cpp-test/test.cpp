@@ -24,7 +24,7 @@ int main(void) {
 	int resultDivide = op.divide();
 
 	// 안내 메시지 출력
-	std::cout << "입력한 피연산자는 " << operand1 << "," << operand2 << "입니다." << std::endl;
+	std::cout << "입력한 피연산자는 " << operand1 << ", " << operand2 << "입니다." << std::endl;
 
 	// 사칙연산 결과 출력
 	std::cout << "덧셈의 결과는 " << resultPlus << std::endl;

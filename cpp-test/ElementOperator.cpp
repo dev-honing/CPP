@@ -1,6 +1,7 @@
-// ElementOperator.cpp - 클래스 구현
+// ElementOperator.cpp - 클래스 구현부
 
 #include "ElementOperator.h"
+#include <iostream>
 
 // ElementOperator 클래스의 생성자 정의
 ElementOperator::ElementOperator(int x, int y) {
