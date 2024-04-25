@@ -21,7 +21,7 @@ bool isPrime(int n) {
         return false;
     }
     // 제곱근은 소수 x
-    for (int i = 3; i * i <= n; i += 2) { // 3부터
+    for (int i = 3; i * i <= n; i += 2) { // 3부터 홀수만 검사
         if (n % i == 0) {
             return false;
         }
