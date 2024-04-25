@@ -30,28 +30,27 @@ bool isPrime(int n) {
 }
 
 // 범위 내의 소수를 출력하는 함수
-void printPrimeNumbers(unsigned int range) {
+void printPrimeNumbers(unsigned int inputRange) {
     std::cout << "범위 내의 소수는 ";
 
     // 2부터 넣어 소수값인지 검사하고 true를 반환한 것들을 출력
-    for (int i = 2; i <= range; ++i) {
+    for (int i = 2; i <= inputRange; ++i) {
         if (isPrime(i) == true) {
             std::cout << i << " ";
         }
     }
-    std::cout << std::endl;
 }
 
 // 프로그램의 main() 함수
 int main() {
     
     // 사용자로부터 범위 입력받기
-    unsigned int range;
+    unsigned int inputRange;
     std::cout << "범위를 입력하세요.";
-    std::cin >> range;
+    std::cin >> inputRange;
 
     // 소수를 출력하는 함수를 호출
-    printPrimeNumbers(range);
+    printPrimeNumbers(inputRange);
 
     return 0;
 }
