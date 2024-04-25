@@ -41,3 +41,17 @@ void printPrimeNumbers(unsigned int range) {
     }
     std::cout << std::endl;
 }
+
+// 프로그램의 main() 함수
+int main() {
+    
+    // 사용자로부터 범위 입력받기
+    unsigned int range;
+    std::cout << "범위를 입력하세요.";
+    std::cin >> range;
+
+    // 소수를 출력하는 함수를 호출
+    printPrimeNumbers(range);
+
+    return 0;
+}
